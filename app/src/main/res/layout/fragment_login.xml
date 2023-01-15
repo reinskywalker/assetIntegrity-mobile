@@ -33,7 +33,7 @@
                 android:layout_marginLeft="24dp"
                 android:layout_marginTop="24dp"
                 android:fontFamily="@font/opensans_light"
-                android:text="Login"
+                android:text="@string/login"
                 android:textColor="@color/white"
                 android:textSize="36sp" />
 
@@ -44,7 +44,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="27dp"
                 android:layout_marginEnd="16dp"
-                android:hint="Username">
+                android:hint="@string/username">
 
                 <com.google.android.material.textfield.TextInputEditText
                     style="@style/LoginInputEditText"
@@ -61,7 +61,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="27dp"
                 android:layout_marginEnd="16dp"
-                android:hint="Password"
+                android:hint="@string/password"
                 app:endIconMode="password_toggle"
                 app:endIconTint="@color/white">
 
@@ -85,7 +85,7 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:fontFamily="@font/opensans_semibold"
-                android:text="Forgot Password"
+                android:text="@string/forgot_password"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
 
@@ -95,7 +95,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="25dp"
                 android:layout_marginEnd="16dp"
-                android:text="Login"
+                android:text="@string/login"
                 app:backgroundTint="@color/white" />
 
             <View
@@ -113,7 +113,7 @@
                 android:layout_marginBottom="24dp"
                 android:fontFamily="@font/opensans_semibold"
                 android:gravity="center"
-                android:text="ASIQ Version 1.0"
+                android:text="@string/app_version"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
         </LinearLayout>
