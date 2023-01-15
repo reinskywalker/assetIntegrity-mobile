@@ -38,6 +38,7 @@
                 android:textSize="36sp" />
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ilUsername"
                 style="@style/LoginInputLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -47,6 +48,7 @@
                 android:hint="@string/username">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtUsername"
                     style="@style/LoginInputEditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -55,6 +57,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ilPassword"
                 style="@style/LoginInputLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -63,9 +66,11 @@
                 android:layout_marginEnd="16dp"
                 android:hint="@string/password"
                 app:endIconMode="password_toggle"
-                app:endIconTint="@color/white">
+                app:endIconTint="@color/white"
+                app:errorIconDrawable="@null">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
@@ -76,6 +81,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/btnForgotPassword"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
@@ -90,6 +96,7 @@
                 android:textSize="12sp" />
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"

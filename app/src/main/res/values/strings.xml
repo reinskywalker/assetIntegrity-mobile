@@ -6,4 +6,10 @@
     <string name="forgot_password">Forgot Password</string>
     <!--TODO panggil versi app pake variable-->
     <string name="app_version">ASIQ Version 1.0</string>
+    <string name="forgot_password_2_lines">Forgot\nPassword</string>
+    <string name="email">Email</string>
+    <string name="send">Send</string>
+    <string name="back_to_login">Back to Login</string>
+    <string name="forgot_password_helper">We will send verification to your email</string>
+    <string name="error_empty_field">Invalid Input</string>
 </resources>

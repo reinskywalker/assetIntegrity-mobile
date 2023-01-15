@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.solusimediadata.asiq.MainActivity
+import com.solusimediadata.asiq.R
 import com.solusimediadata.asiq.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
@@ -26,6 +27,7 @@ class LoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initToolbar()
+        initListener()
     }
 
     private fun initToolbar() {
@@ -36,8 +38,41 @@ class LoginFragment : Fragment() {
         )
     }
 
+    private fun initListener() {
+        binding.btnForgotPassword.setOnClickListener {
+            findNavController().navigate(R.id.action_loginFragment_to_forgotPasswordFragment)
+        }
+
+        binding.btnLogin.setOnClickListener {
+            if (validate()) {
+
+            }
+        }
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    private fun validate(): Boolean {
+        resetError()
+
+        if (binding.txtUsername.text.toString().isBlank()) {
+            binding.ilUsername.error = getString(R.string.error_empty_field)
+            binding.txtUsername.requestFocus()
+            return false
+        }
+        if (binding.txtPassword.text.toString().isBlank()) {
+            binding.ilPassword.error = getString(R.string.error_empty_field)
+            binding.txtPassword.requestFocus()
+            return false
+        }
+        return true
+    }
+
+    private fun resetError() {
+        binding.ilUsername.error = null
+        binding.ilPassword.error = null
     }
 }

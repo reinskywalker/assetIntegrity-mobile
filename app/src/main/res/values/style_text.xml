@@ -4,4 +4,9 @@
     <style name="HintTextAppearance" parent="TextAppearance.MaterialComponents.Body1">
         <item name="android:textSize">12sp</item>
     </style>
+
+    <style name="HelperTextAppearance" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/opensans_regular</item>
+    </style>
 </resources>

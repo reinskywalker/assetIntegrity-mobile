@@ -18,6 +18,12 @@
         <item name="hintTextColor">@color/white</item>
 
         <item name="materialThemeOverlay">@style/WhiteCursor</item>
+        <item name="helperTextTextAppearance">@style/HelperTextAppearance</item>
+
+        <!--Error Style-->
+        <item name="errorEnabled">true</item>
+        <item name="errorIconTint">@color/white</item>
+        <item name="errorTextColor">@color/white</item>
     </style>
 
     <style name="WhiteCursor" parent="ThemeOverlay.MaterialComponents.TextInputEditText.OutlinedBox">
