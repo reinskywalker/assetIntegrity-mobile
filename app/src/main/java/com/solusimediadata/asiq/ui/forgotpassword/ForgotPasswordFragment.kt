@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
+import com.solusimediadata.asiq.BuildConfig
 import com.solusimediadata.asiq.MainActivity
 import com.solusimediadata.asiq.R
 import com.solusimediadata.asiq.databinding.FragmentForgotPasswordBinding
@@ -27,6 +28,7 @@ class ForgotPasswordFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initToolbar()
+        initView()
         initListener()
     }
 
@@ -36,6 +38,10 @@ class ForgotPasswordFragment : Fragment() {
             findNavController(),
             activity.appBarConfiguration
         )
+    }
+
+    private fun initView() {
+        binding.lblVersion.text = getString(R.string.app_version, BuildConfig.VERSION_NAME)
     }
 
     private fun initListener() {
