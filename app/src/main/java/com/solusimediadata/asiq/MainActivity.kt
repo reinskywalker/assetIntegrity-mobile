@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity(), NavController.OnDestinationChangedList
     lateinit var appBarConfiguration: AppBarConfiguration
     private val topLevelFragments = setOf(
         R.id.loginFragment,
+        R.id.forgotPasswordFragment
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,7 +45,8 @@ class MainActivity : AppCompatActivity(), NavController.OnDestinationChangedList
         arguments: Bundle?
     ) {
         when (destination.id) {
-            R.id.loginFragment->{
+            R.id.loginFragment,
+            R.id.forgotPasswordFragment -> {
                 binding.bottomNavigation.visibility = View.GONE
             }
         }
