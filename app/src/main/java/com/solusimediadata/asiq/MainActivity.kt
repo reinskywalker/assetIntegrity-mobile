@@ -19,7 +19,8 @@ class MainActivity : AppCompatActivity(), NavController.OnDestinationChangedList
     lateinit var appBarConfiguration: AppBarConfiguration
     private val topLevelFragments = setOf(
         R.id.loginFragment,
-        R.id.forgotPasswordFragment
+        R.id.forgotPasswordFragment,
+        R.id.profileFragment
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,7 +33,8 @@ class MainActivity : AppCompatActivity(), NavController.OnDestinationChangedList
     }
 
     private fun initBottomNavigation() {
-        binding.bottomNavigation.itemIconTintList = null
+        //todo add color selector for bottom navigation
+//        binding.bottomNavigation.itemIconTintList = null
         navController = findNavController(R.id.navHostFragment)
         navController.addOnDestinationChangedListener(this)
         appBarConfiguration = AppBarConfiguration(topLevelFragments)
@@ -48,6 +50,9 @@ class MainActivity : AppCompatActivity(), NavController.OnDestinationChangedList
             R.id.loginFragment,
             R.id.forgotPasswordFragment -> {
                 binding.bottomNavigation.visibility = View.GONE
+            }
+            else -> {
+                binding.bottomNavigation.visibility = View.VISIBLE
             }
         }
     }

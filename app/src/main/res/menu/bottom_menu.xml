@@ -2,11 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/action_history"
-        android:title="Riwayat" />
+        android:icon="@drawable/ic_baseline_assessment_24"
+        android:title="@string/history" />
     <item
         android:id="@+id/action_home"
-        android:title="Home" />
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="@string/home" />
     <item
-        android:id="@+id/action_work_order"
-        android:title="Work Order" />
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="@string/profile" />
 </menu>

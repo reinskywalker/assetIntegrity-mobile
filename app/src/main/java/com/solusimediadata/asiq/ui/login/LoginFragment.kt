@@ -51,7 +51,7 @@ class LoginFragment : Fragment() {
 
         binding.btnLogin.setOnClickListener {
             if (validate()) {
-
+                findNavController().navigate(R.id.action_loginFragment_to_profileFragment)
             }
         }
     }

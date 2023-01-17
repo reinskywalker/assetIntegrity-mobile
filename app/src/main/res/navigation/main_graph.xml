@@ -14,6 +14,11 @@
             android:id="@+id/action_loginFragment_to_forgotPasswordFragment"
             app:destination="@id/forgotPasswordFragment"
             app:popUpTo="@id/loginFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
     </fragment>
 
     <fragment
@@ -21,4 +26,9 @@
         android:name="com.solusimediadata.asiq.ui.forgotpassword.ForgotPasswordFragment"
         android:label=""
         tools:layout="@layout/fragment_forgot_password" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.solusimediadata.asiq.ui.profile.ProfileFragment"
+        android:label=""
+        tools:layout="@layout/fragment_profile" />
 </navigation>
