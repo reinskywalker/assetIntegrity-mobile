@@ -1,4 +1,4 @@
-package com.solusimediadata.asiq.ui.login
+package com.solusimediadata.asiq.ui.forgotpassword
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,10 +10,10 @@ import androidx.navigation.ui.setupWithNavController
 import com.solusimediadata.asiq.BuildConfig
 import com.solusimediadata.asiq.MainActivity
 import com.solusimediadata.asiq.R
-import com.solusimediadata.asiq.databinding.FragmentLoginBinding
+import com.solusimediadata.asiq.databinding.FragmentForgotPasswordBinding
 
-class LoginFragment : Fragment() {
-    private var _binding: FragmentLoginBinding? = null
+class ForgotPasswordFragment : Fragment() {
+    private var _binding: FragmentForgotPasswordBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -21,7 +21,7 @@ class LoginFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentLoginBinding.inflate(inflater, container, false)
+        _binding = FragmentForgotPasswordBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -45,13 +45,13 @@ class LoginFragment : Fragment() {
     }
 
     private fun initListener() {
-        binding.btnForgotPassword.setOnClickListener {
-            findNavController().navigate(R.id.action_loginFragment_to_forgotPasswordFragment)
+        binding.btnBackToLogin.setOnClickListener {
+            findNavController().navigateUp()
         }
 
-        binding.btnLogin.setOnClickListener {
+        binding.btnSend.setOnClickListener {
             if (validate()) {
-                findNavController().navigate(R.id.action_loginFragment_to_profileFragment)
+
             }
         }
     }
@@ -64,21 +64,15 @@ class LoginFragment : Fragment() {
     private fun validate(): Boolean {
         resetError()
 
-        if (binding.txtUsername.text.toString().isBlank()) {
-            binding.ilUsername.error = getString(R.string.error_empty_field)
-            binding.txtUsername.requestFocus()
-            return false
-        }
-        if (binding.txtPassword.text.toString().isBlank()) {
-            binding.ilPassword.error = getString(R.string.error_empty_field)
-            binding.txtPassword.requestFocus()
+        if (binding.txtEmail.text.toString().isBlank()) {
+            binding.ilEmail.error = getString(R.string.error_empty_field)
+            binding.txtEmail.requestFocus()
             return false
         }
         return true
     }
 
     private fun resetError() {
-        binding.ilUsername.error = null
-        binding.ilPassword.error = null
+        binding.ilEmail.error = null
     }
 }

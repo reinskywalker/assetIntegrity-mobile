@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Gak bisa set custom font dan warna hint disini-->
+    <style name="HintTextAppearance" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="HelperTextAppearance" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/opensans_regular</item>
+    </style>
+
+    <style name="Subtitle" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textColor">@color/tundora</item>
+        <item name="android:textSize">12sp</item>
+        <item name="fontFamily">@font/opensans_semibold</item>
+    </style>
+</resources>
