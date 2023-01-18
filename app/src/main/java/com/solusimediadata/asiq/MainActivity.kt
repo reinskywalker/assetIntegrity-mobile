@@ -20,7 +20,8 @@ class MainActivity : AppCompatActivity(), NavController.OnDestinationChangedList
     private val topLevelFragments = setOf(
         R.id.loginFragment,
         R.id.forgotPasswordFragment,
-        R.id.profileFragment
+        R.id.profileFragment,
+        R.id.historyFragment
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
