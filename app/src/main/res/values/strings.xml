@@ -22,4 +22,6 @@
     <string name="contact_us">Contact Us</string>
     <string name="term_of_service">Term of Service</string>
     <string name="about">About</string>
+    <string name="tasks">Tasks</string>
+    <string name="finished">Finished</string>
 </resources>
